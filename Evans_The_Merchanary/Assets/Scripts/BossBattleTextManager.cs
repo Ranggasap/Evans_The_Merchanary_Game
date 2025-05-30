@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class IntroTextManager : MonoBehaviour
+public class BossBattleTextManager : MonoBehaviour
 {
     [Header("Text Manager Properties")]
     [SerializeField] private List<TextSO> sequenceTextSO;
@@ -37,7 +37,7 @@ public class IntroTextManager : MonoBehaviour
         if (currentTextSequence == sequenceTextSO.Count - 1 && !isIntroAlreadyOver)
         {
             isIntroAlreadyOver = true;
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("BossBattle");
             return;
         }
 
